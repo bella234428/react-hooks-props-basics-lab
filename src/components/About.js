@@ -1,14 +1,17 @@
 import React from "react";
+import Home from "./Home";
+import About from "./About";
+import NavBar from "./NavBar";
+import user from "../data/user";
 
-function About() {
+function App() {
   return (
-    <div id="about">
-      <h2>About Me</h2>
-      <p>Put the bio in here</p>
-      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      {/* add your <Links /> component here */}
+    <div>
+      <NavBar />
+      <Home name={user.name} city={user.city} />
+      <About bio={user.bio} github={user.links.github} linkedin={user.links.linkedin} />
     </div>
   );
 }
 
-export default About;
+export default App;
